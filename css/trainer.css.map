@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../style/trainer.scss"
+    ],
+    "names": [],
+    "file": "trainer.css"
+}

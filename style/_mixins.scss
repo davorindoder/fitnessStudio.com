@@ -1,0 +1,47 @@
+@mixin flex($align, $justify, $direction, $wrap) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+}
+
+@mixin accents_hdln($lineClr, $color) {
+	text-align: center;
+	h2 {
+		text-transform: uppercase;
+		color: $color;
+		font-size: 2.8rem;
+		font-weight: 500;
+		position: relative;
+		line-height: 1;
+		display: inline-block;
+		&::before {
+			content: "/";
+
+			display: block;
+			color: $lineClr;
+			position: relative;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-35%);
+			width: 100%;
+		}
+		&::after {
+			content: "/";
+
+			display: block;
+			color: $lineClr;
+			position: relative;
+			top: 100%;
+			left: 50%;
+			transform: translateX(-65%);
+			width: 100%;
+		}
+	}
+	@media(max-width:$mob) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
+}
